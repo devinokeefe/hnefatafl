@@ -364,11 +364,10 @@ impl Position {
         let hostile = self.hostile_to(mover.other());
         let mut captured = Bb::EMPTY;
         for dir in 0..4 {
-            if let (Some(middle), Some(far)) = (step(to, dir, 1), step(to, dir, 2))
-                && victims.has(middle)
-                && hostile.has(far)
-            {
-                captured.set(middle);
+            if let (Some(middle), Some(far)) = (step(to, dir, 1), step(to, dir, 2)) {
+                if victims.has(middle) && hostile.has(far) {
+                    captured.set(middle);
+                }
             }
         }
         captured
