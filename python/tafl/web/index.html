@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hnefatafl Engine</title>
+<style>
+  :root {
+    --bg: #f4f1ea; --panel: #fffdf8; --ink: #2a2622; --muted: #7a7166; --line: #d9d1c3;
+    --square: #e6dcc6; --square-alt: #ddd2b9; --special: #c9b48a; --mark: #a8915f;
+    --last: #f0d58a; --sel: #8fb5d9; --dot: rgba(40, 70, 110, .45);
+    --attacker: #2d2a27; --defender: #f7f2e6; --king: #d4a537; --accent: #3d6b9e;
+    --att-bar: #3a3632; --def-bar: #e9e1cf;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1b1a18; --panel: #24221f; --ink: #ece6da; --muted: #a39a8d; --line: #3a3631;
+      --square: #4a4237; --square-alt: #443c32; --special: #6d5d40; --mark: #8c7750;
+      --last: #7c6a35; --sel: #3f6990; --dot: rgba(190, 215, 240, .5);
+      --attacker: #121110; --defender: #efe7d6; --king: #d9ad45; --accent: #79a6d6;
+      --att-bar: #0f0e0d; --def-bar: #d8cfbd;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { display: flex; gap: 24px; justify-content: center; align-items: flex-start;
+         padding: 24px 16px; flex-wrap: wrap; }
+  .board-wrap { width: min(92vw, 620px); }
+  .board { display: grid; grid-template-columns: 22px repeat(11, 1fr); grid-auto-rows: auto;
+           user-select: none; }
+  .coord { font-size: 11px; color: var(--muted); display: flex; align-items: center;
+           justify-content: center; }
+  .sq { aspect-ratio: 1; position: relative; background: var(--square); border: 1px solid var(--line);
+        display: flex; align-items: center; justify-content: center; cursor: pointer; }
+  .sq.alt { background: var(--square-alt); }
+  .sq.special { background: var(--special); }
+  .sq.special::before { content: ""; position: absolute; inset: 22%; border: 2px solid var(--mark);
+                        transform: rotate(45deg); }
+  .sq.last { box-shadow: inset 0 0 0 100px color-mix(in srgb, var(--last) 55%, transparent); }
+  .sq.sel { box-shadow: inset 0 0 0 3px var(--sel); }
+  .sq.target::after { content: ""; position: absolute; width: 26%; height: 26%; border-radius: 50%;
+                      background: var(--dot); }
+  .piece { width: 74%; height: 74%; border-radius: 50%; position: relative; z-index: 1;
+           box-shadow: 0 2px 3px rgba(0,0,0,.35); }
+  .piece.a { background: radial-gradient(circle at 35% 30%, #57524c, var(--attacker) 70%); }
+  .piece.d, .piece.k { background: radial-gradient(circle at 35% 30%, #fff, var(--defender) 70%);
+                       border: 1px solid #b9ab92; }
+  .piece.k::after { content: ""; position: absolute; inset: 24%; border-radius: 50%;
+                    background: var(--king); box-shadow: inset 0 0 0 2px rgba(0,0,0,.15); }
+  .files { display: grid; grid-template-columns: 22px repeat(11, 1fr); margin-top: 2px; }
+  aside { width: min(92vw, 320px); background: var(--panel); border: 1px solid var(--line);
+          border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 14px; }
+  h1 { font-size: 20px; margin: 0; }
+  .muted { color: var(--muted); font-size: 13px; }
+  .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 7px; overflow: hidden; }
+  .seg button { border: 0; border-radius: 0; border-right: 1px solid var(--line); }
+  .seg button:last-child { border-right: 0; }
+  .seg button.on { background: var(--accent); color: #fff; }
+  button, select { font: inherit; padding: 6px 11px; border-radius: 7px; border: 1px solid var(--line);
+                   background: var(--bg); color: var(--ink); cursor: pointer; }
+  button:disabled { opacity: .5; cursor: default; }
+  .status { font-weight: 600; }
+  .bar { height: 14px; border-radius: 7px; overflow: hidden; background: var(--def-bar);
+         border: 1px solid var(--line); }
+  .bar > div { height: 100%; background: var(--att-bar); transition: width .3s; }
+  .moves { max-height: 220px; overflow-y: auto; font-family: ui-monospace, Consolas, monospace;
+           font-size: 13px; display: grid; grid-template-columns: 34px 1fr 1fr; gap: 2px 8px; }
+  .label { font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+  .pv { font-family: ui-monospace, Consolas, monospace; font-size: 12px; word-break: break-word; }
+</style>
+</head>
+<body>
+<main>
+  <div class="board-wrap">
+    <div class="board" id="board"></div>
+    <div class="files" id="files"></div>
+  </div>
+  <aside>
+    <div>
+      <h1>Copenhagen Hnefatafl</h1>
+      <div class="muted" id="engine-name">connecting…</div>
+    </div>
+    <div>
+      <div class="label">You play</div>
+      <div class="seg" id="mode">
+        <button data-mode="attackers">Attackers</button>
+        <button data-mode="defenders" class="on">Defenders</button>
+        <button data-mode="both">Both</button>
+        <button data-mode="watch">Watch</button>
+      </div>
+    </div>
+    <div class="row">
+      <span class="label">Engine time</span>
+      <select id="movetime">
+        <option value="500">0.5 s</option>
+        <option value="1000" selected>1 s</option>
+        <option value="3000">3 s</option>
+        <option value="10000">10 s</option>
+      </select>
+    </div>
+    <div class="row">
+      <button id="new">New game</button>
+      <button id="undo">Undo</button>
+      <button id="go">Engine move</button>
+    </div>
+    <div class="status" id="status"></div>
+    <div>
+      <div class="row" style="justify-content: space-between">
+        <span class="label">Attackers</span><span class="muted" id="eval-text">–</span><span class="label">Defenders</span>
+      </div>
+      <div class="bar"><div id="eval-bar" style="width: 50%"></div></div>
+      <div class="pv muted" id="pv"></div>
+    </div>
+    <div>
+      <div class="label">Moves</div>
+      <div class="moves" id="moves"></div>
+    </div>
+  </aside>
+</main>
+<script>
+const SIZE = 11, FILES = "abcdefghijk";
+const SPECIAL = new Set(["a1", "a11", "k1", "k11", "f6"]);
+let moves = [], state = null, selected = null, mode = "defenders", thinking = false, generation = 0;
+
+const $ = (id) => document.getElementById(id);
+const name = (r, c) => FILES[c] + (r + 1);
+const parseMove = (m) => { const x = /^([a-k]\d+)([a-k]\d+)$/.exec(m); return x ? [x[1], x[2]] : null; };
+
+async function api(path, body) {
+  const res = await fetch(path, { method: body ? "POST" : "GET", body: body ? JSON.stringify(body) : undefined,
+                                  headers: { "Content-Type": "application/json" } });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || res.statusText);
+  return data;
+}
+
+function pieces(fen) {
+  const map = {};
+  fen.split(" ")[0].split("/").forEach((row, i) => {
+    const r = SIZE - 1 - i;
+    let c = 0;
+    for (const m of row.matchAll(/(\d+)|([adk])/g)) {
+      if (m[1]) c += Number(m[1]); else map[name(r, c++)] = m[2];
+    }
+  });
+  return map;
+}
+
+function humanToMove() {
+  if (!state || state.outcome || thinking) return false;
+  return mode === "both" || mode === state.side;
+}
+
+function render() {
+  const board = $("board");
+  board.innerHTML = "";
+  const map = state ? pieces(state.fen) : {};
+  const last = moves.length ? parseMove(moves[moves.length - 1]) : null;
+  const targets = new Set(selected && state ? state.legal.filter((m) => parseMove(m)[0] === selected)
+                                                   .map((m) => parseMove(m)[1]) : []);
+  for (let r = SIZE - 1; r >= 0; r--) {
+    const coord = document.createElement("div");
+    coord.className = "coord";
+    coord.textContent = r + 1;
+    board.appendChild(coord);
+    for (let c = 0; c < SIZE; c++) {
+      const sq = name(r, c);
+      const el = document.createElement("div");
+      el.className = "sq" + ((r + c) % 2 ? " alt" : "") + (SPECIAL.has(sq) ? " special" : "")
+        + (last && last.includes(sq) ? " last" : "") + (sq === selected ? " sel" : "")
+        + (targets.has(sq) ? " target" : "");
+      if (map[sq]) {
+        const p = document.createElement("div");
+        p.className = "piece " + map[sq];
+        el.appendChild(p);
+      }
+      el.onclick = () => clickSquare(sq, map);
+      board.appendChild(el);
+    }
+  }
+  const files = $("files");
+  files.innerHTML = "<div></div>" + [...FILES].map((f) => `<div class="coord">${f}</div>`).join("");
+
+  let status = "";
+  if (!state) status = "Loading…";
+  else if (state.outcome) status = `${cap(state.outcome.winner)} win: ${reason(state.outcome.reason)}`;
+  else if (thinking) status = "Engine is thinking…";
+  else status = `${cap(state.side)} to move` + (humanToMove() ? " (you)" : "");
+  $("status").textContent = status;
+
+  const list = $("moves");
+  list.innerHTML = "";
+  for (let i = 0; i < moves.length; i += 2) {
+    list.insertAdjacentHTML("beforeend",
+      `<span class="muted">${i / 2 + 1}.</span><span>${moves[i]}</span><span>${moves[i + 1] || ""}</span>`);
+  }
+  list.scrollTop = list.scrollHeight;
+  $("undo").disabled = thinking || moves.length === 0;
+  $("go").disabled = thinking || !state || !!state.outcome;
+  document.querySelectorAll("#mode button").forEach((b) => b.classList.toggle("on", b.dataset.mode === mode));
+}
+
+const cap = (s) => s[0].toUpperCase() + s.slice(1);
+const reason = (r) => ({ KingEscaped: "the king escaped", KingCaptured: "the king was captured",
+  Encircled: "the defenders are encircled", ExitFort: "edge fort", Repetition: "threefold repetition",
+  NoMoves: "no legal moves" })[r] || r;
+
+function clickSquare(sq, map) {
+  if (!humanToMove()) return;
+  if (selected) {
+    const move = selected + sq;
+    if (state.legal.includes(move)) { selected = null; play(move); return; }
+  }
+  const own = state.side === "attackers" ? map[sq] === "a" : map[sq] === "d" || map[sq] === "k";
+  selected = own && sq !== selected ? sq : null;
+  render();
+}
+
+async function play(move) {
+  moves.push(move);
+  await refresh();
+}
+
+async function refresh() {
+  const gen = generation;
+  const s = await api("/api/state", { moves });
+  if (gen !== generation) return;
+  state = s;
+  render();
+  if (!state.outcome && (mode === "watch" || (mode !== "both" && mode !== state.side))) engineMove();
+}
+
+async function engineMove() {
+  if (thinking || !state || state.outcome) return;
+  thinking = true;
+  render();
+  const gen = generation;
+  try {
+    const r = await api("/api/think", { moves, movetime_ms: Number($("movetime").value) });
+    if (gen !== generation) return;
+    showEval(r, state.side);
+    thinking = false;
+    await play(r.best);
+  } catch (e) {
+    $("status").textContent = "Engine error: " + e.message;
+  } finally {
+    if (gen === generation) { thinking = false; render(); }
+  }
+}
+
+function showEval(r, side) {
+  const own = (r.value + 1) / 2;
+  const attackers = side === "attackers" ? own : 1 - own;
+  $("eval-bar").style.width = (attackers * 100).toFixed(1) + "%";
+  const proof = r.proof === 1 ? " (forced win)" : r.proof === -1 ? " (forced loss)" : "";
+  $("eval-text").textContent = `${(attackers * 100).toFixed(0)}% attackers${proof}`;
+  $("pv").textContent = `${r.simulations.toLocaleString()} nodes in ${r.time_ms} ms · ${r.pv.slice(0, 8).join(" ")}`;
+}
+
+$("new").onclick = () => { generation++; thinking = false; moves = []; selected = null; refresh(); };
+$("undo").onclick = () => {
+  generation++;
+  thinking = false;
+  moves.pop();
+  // Undo back to a position where it is the human's turn.
+  if (mode === "attackers" || mode === "defenders") {
+    while (moves.length && (moves.length % 2 === 0 ? "attackers" : "defenders") !== mode) moves.pop();
+  }
+  selected = null;
+  refresh();
+};
+$("go").onclick = () => engineMove();
+document.querySelectorAll("#mode button").forEach((b) => b.onclick = () => {
+  mode = b.dataset.mode; selected = null; render(); refresh();
+});
+
+api("/api/engine").then((e) => { $("engine-name").textContent = "Engine: " + e.name; }).catch(() => {});
+refresh().catch((e) => { $("status").textContent = "Server error: " + e.message; });
+</script>
+</body>
+</html>

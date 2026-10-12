@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tafl-ai"
+version = "0.1.0"
+description = "Copenhagen Hnefatafl engine: Rust rules and search, PyTorch self-play training"
+license = "GPL-3.0-or-later"
+requires-python = ">=3.10"
+dependencies = ["numpy", "torch"]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[tool.setuptools]
+package-dir = { "" = "python" }
+packages = ["tafl"]
+
+[tool.pytest.ini_options]
+pythonpath = ["python"]
+testpaths = ["python/tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+src = ["python"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]

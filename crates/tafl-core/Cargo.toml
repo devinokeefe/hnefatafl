@@ -1,0 +1,9 @@
+[package]
+name = "tafl-core"
+description = "Copenhagen Hnefatafl 11x11 rules (TaflZero operational contract): bitboards, moves, captures, terminal states"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]

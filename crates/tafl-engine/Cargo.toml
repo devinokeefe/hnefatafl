@@ -1,0 +1,11 @@
+[package]
+name = "tafl-engine"
+description = "Batched MCTS (Gumbel AlphaZero / PUCT) with exact tactics, network encoding and self-play"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+tafl-core = { path = "../tafl-core" }
+rayon = "1.10"

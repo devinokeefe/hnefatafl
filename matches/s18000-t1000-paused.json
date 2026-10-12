@@ -1,0 +1,34 @@
+{
+  "match": "s18000-t1000-paused",
+  "records": {
+    "file": "s18000-t1000-paused.jsonl",
+    "games": 18,
+    "sha256": "c9bbcc006d717bc2b6aadb5418ff271cc0f02e7b75b7ce4e0bda7aaad545ef88"
+  },
+  "runs": [
+    {
+      "log": "s18000-t1000-paused.log",
+      "errors": "s18000-t1000-paused.err.log",
+      "created": "2026-10-04T05:27:48+01:00",
+      "last_written": "2026-10-04T05:36:14+01:00",
+      "header": {
+        "model": "step_0018000.pt",
+        "opponent": "taflzero",
+        "ours": "1000 ms",
+        "theirs": "1000 ms",
+        "search": {
+          "algorithm": "puct",
+          "gumbel_noise": false,
+          "c_puct": 1.5
+        },
+        "leaves": 16,
+        "reuse_tree": true,
+        "moves_left_alpha": 0.0,
+        "pairs": 16,
+        "opening_plies": 2,
+        "seed": 1
+      }
+    }
+  ],
+  "summary": null
+}

@@ -1,0 +1,16 @@
+{"model": "models/step_0036000.pt", "opponent": "taflzero", "ours": "15000 ms", "theirs": "15000 ms", "search": {"algorithm": "puct", "gumbel_noise": false, "c_puct": 1.5}, "leaves": 16, "reuse_tree": true, "moves_left_alpha": 0.0, "pairs": 8, "opening_plies": 2, "seed": 1, "min_opponent_speed": 1350.0, "above_normal": true}
+resuming with 19 recorded games, 13 of them too slow to count
+machine busy: taflzero reaches 481 of 1350 nodes/s
+machine busy: taflzero reaches 680 of 1350 nodes/s
+machine quiet: taflzero reaches 1576 nodes/s
+[   1153s] game 6/16: ours (att) vs taflzero (def) -> unknown by Interrupted in 52 plies | ours +5 -0 =1 | not counted: another process on the GPU
+machine busy: another process is using the GPU
+machine quiet: taflzero reaches 1568 nodes/s
+[   2239s] game 6/16: ours (att) vs taflzero (def) -> unknown by Interrupted in 61 plies | ours +5 -0 =1 | not counted: another process on the GPU
+machine quiet: taflzero reaches 1729 nodes/s
+[   3831s] game 7/16: ours (att) vs taflzero (def) -> ours by KingCaptured in 113 plies | ours +6 -0 =1
+machine busy: another process is using the GPU
+machine busy: another process is using the GPU
+machine busy: another process is using the GPU
+machine busy: another process is using the GPU
+the machine stayed busy; run again with --resume to continue

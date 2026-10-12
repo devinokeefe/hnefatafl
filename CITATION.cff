@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite it as below."
+type: software
+title: "Learning Hnefatafl: a Copenhagen Hnefatafl engine trained from scratch by self-play"
+abstract: >-
+  An AlphaZero-style engine for Copenhagen Hnefatafl (11x11): a Rust rules and search core
+  and a PyTorch network trained only by self-play, with the records of its matches against
+  TaflZero at 15 seconds per move.
+authors:
+  - family-names: "O'Keefe"
+    given-names: "Devin"
+version: 0.1.0
+date-released: 2026-10-12
+license: GPL-3.0-or-later
+repository-code: "https://github.com/devinokeefe/hnefatafl"
+keywords:
+  - hnefatafl
+  - tafl
+  - self-play
+  - reinforcement learning
+  - Monte Carlo tree search

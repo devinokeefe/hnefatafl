@@ -1,0 +1,54 @@
+{
+  "match": "s26000-t1000-paused",
+  "records": {
+    "file": "s26000-t1000-paused.jsonl",
+    "games": 32,
+    "sha256": "59b8d07cda258ddcd334ad81ea48507ccc2dbd3f2a7722ad36040229cb1e618d"
+  },
+  "runs": [
+    {
+      "log": "s26000-t1000-paused.log",
+      "created": "2026-10-04T05:05:23+01:00",
+      "last_written": "2026-10-04T05:27:45+01:00",
+      "header": {
+        "model": "step_0026000.pt",
+        "opponent": "taflzero",
+        "ours": "1000 ms",
+        "theirs": "1000 ms",
+        "search": {
+          "algorithm": "puct",
+          "gumbel_noise": false,
+          "c_puct": 1.5
+        },
+        "leaves": 16,
+        "reuse_tree": true,
+        "moves_left_alpha": 0.0,
+        "pairs": 16,
+        "opening_plies": 2,
+        "seed": 1
+      }
+    }
+  ],
+  "summary": {
+    "games": 32,
+    "wins": 11,
+    "losses": 11,
+    "unknown": 10,
+    "as_attackers": 0.375,
+    "as_defenders": 0.625,
+    "score": 0.5,
+    "score_ci95": [
+      0.3658079734112343,
+      0.6341920265887657
+    ],
+    "elo": -0.0,
+    "elo_ci95": [
+      -95.58704404023331,
+      95.58704404023331
+    ],
+    "z": 0.0,
+    "pairs_won": 5,
+    "pairs_lost": 7,
+    "sign_test_p": 0.7744140625
+  }
+}

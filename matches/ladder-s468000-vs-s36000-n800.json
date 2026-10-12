@@ -1,0 +1,58 @@
+{
+  "match": "ladder-s468000-vs-s36000-n800",
+  "records": {
+    "file": "ladder-s468000-vs-s36000-n800.jsonl",
+    "games": 32,
+    "sha256": "d606d603154a7794307f5374b4ebb7015b40bf247f8a722f730a87ec00a320f3"
+  },
+  "runs": [
+    {
+      "log": "ladder-s468000-vs-s36000-n800.log",
+      "created": "2026-10-11T13:07:00+01:00",
+      "last_written": "2026-10-11T13:13:10+01:00",
+      "header": {
+        "model": "models/step_0468000.pt",
+        "opponent": "models/step_0036000.pt",
+        "ours": "800 nodes",
+        "theirs": "800 nodes",
+        "search": {
+          "algorithm": "puct",
+          "gumbel_noise": false,
+          "c_puct": 1.5
+        },
+        "leaves": 8,
+        "reuse_tree": true,
+        "moves_left_alpha": 0.0,
+        "pairs": 16,
+        "opening_plies": 2,
+        "seed": 1,
+        "min_opponent_speed": 0.0,
+        "above_normal": false,
+        "gpu_priority": false
+      }
+    }
+  ],
+  "summary": {
+    "games": 32,
+    "wins": 32,
+    "losses": 0,
+    "unknown": 0,
+    "as_attackers": 1.0,
+    "as_defenders": 1.0,
+    "score": 1.0,
+    "score_ci95": [
+      1.0,
+      1.0
+    ],
+    "elo": 2399.999826281142,
+    "elo_ci95": [
+      2399.999826281142,
+      2399.999826281142
+    ],
+    "z": null,
+    "pairs_won": 16,
+    "pairs_lost": 0,
+    "sign_test_p": 3.0517578125e-05,
+    "not_counted": 0
+  }
+}

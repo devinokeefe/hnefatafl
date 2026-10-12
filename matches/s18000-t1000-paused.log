@@ -1,0 +1,19 @@
+{"model": "step_0018000.pt", "opponent": "taflzero", "ours": "1000 ms", "theirs": "1000 ms", "search": {"algorithm": "puct", "gumbel_noise": false, "c_puct": 1.5}, "leaves": 16, "reuse_tree": true, "moves_left_alpha": 0.0, "pairs": 16, "opening_plies": 2, "seed": 1}
+[     34s] game 1/32: ours (att) vs taflzero (def) -> taflzero by ExitFort in 36 plies | ours +0 -1 =0
+[     44s] game 2/32: ours (att) vs taflzero (def) -> taflzero by ExitFort in 46 plies | ours +0 -2 =0
+[     80s] game 3/32: ours (att) vs taflzero (def) -> taflzero by ExitFort in 80 plies | ours +0 -3 =0
+[     80s] game 4/32: ours (att) vs taflzero (def) -> taflzero by ExitFort in 80 plies | ours +0 -4 =0
+[    110s] game 5/32: ours (att) vs taflzero (def) -> taflzero by ExitFort in 76 plies | ours +0 -5 =0
+[    137s] game 6/32: ours (att) vs taflzero (def) -> taflzero by ExitFort in 58 plies | ours +0 -6 =0
+[    145s] game 7/32: ours (att) vs taflzero (def) -> taflzero by ExitFort in 38 plies | ours +0 -7 =0
+[    155s] game 8/32: taflzero (att) vs ours (def) -> taflzero by Repetition in 152 plies | ours +0 -8 =0
+[    197s] game 9/32: ours (att) vs taflzero (def) -> taflzero by ExitFort in 54 plies | ours +0 -9 =0
+[    202s] game 10/32: taflzero (att) vs ours (def) -> taflzero by Repetition in 199 plies | ours +0 -10 =0
+[    294s] game 11/32: taflzero (att) vs ours (def) -> taflzero by Repetition in 155 plies | ours +0 -11 =0
+[    342s] game 12/32: ours (att) vs taflzero (def) -> ours by Repetition in 143 plies | ours +1 -11 =0
+[    355s] game 13/32: ours (att) vs taflzero (def) -> taflzero by ExitFort in 62 plies | ours +1 -12 =0
+[    368s] game 14/32: taflzero (att) vs ours (def) -> taflzero by Repetition in 355 plies | ours +1 -13 =0
+[    388s] game 15/32: taflzero (att) vs ours (def) -> taflzero by Repetition in 220 plies | ours +1 -14 =0
+[    420s] game 16/32: ours (att) vs taflzero (def) -> taflzero by ExitFort in 58 plies | ours +1 -15 =0
+[    487s] game 17/32: ours (att) vs taflzero (def) -> taflzero by ExitFort in 96 plies | ours +1 -16 =0
+[    493s] game 18/32: taflzero (att) vs ours (def) -> taflzero by Repetition in 426 plies | ours +1 -17 =0

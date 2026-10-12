@@ -1,0 +1,18 @@
+[package]
+name = "tafl-cli"
+description = "Command-line tools: perft, rules differential testing against TaflZero, a reference dump, benchmarks"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "tafl"
+path = "src/main.rs"
+
+[dependencies]
+tafl-core = { path = "../tafl-core" }
+tafl-engine = { path = "../tafl-engine" }
+rayon = "1.10"
+serde_json = "1"
+clap = { version = "4", default-features = false, features = ["std", "derive", "help", "usage", "error-context"] }

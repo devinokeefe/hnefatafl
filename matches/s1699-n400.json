@@ -1,0 +1,53 @@
+{
+  "match": "s1699-n400",
+  "records": {
+    "file": "s1699-n400.jsonl",
+    "games": 32,
+    "sha256": "d9efab789a9f707b94209ea173051ae35ecbd072204af83226dbe53429243d26"
+  },
+  "runs": [
+    {
+      "log": "s1699-n400.log",
+      "created": "2026-10-03T20:32:01+01:00",
+      "last_written": "2026-10-03T20:41:25+01:00",
+      "header": {
+        "model": "step_0001699.pt",
+        "opponent": "taflzero",
+        "ours": "400 nodes",
+        "theirs": "400 nodes",
+        "search": {
+          "algorithm": "puct",
+          "gumbel_noise": false,
+          "c_puct": 1.5
+        },
+        "leaves": 1,
+        "moves_left_alpha": 0.0,
+        "pairs": 16,
+        "opening_plies": 2,
+        "seed": 1
+      }
+    }
+  ],
+  "summary": {
+    "games": 32,
+    "wins": 0,
+    "losses": 32,
+    "unknown": 0,
+    "as_attackers": 0.0,
+    "as_defenders": 0.0,
+    "score": 0.0,
+    "score_ci95": [
+      0.0,
+      0.0
+    ],
+    "elo": -2399.9998262821205,
+    "elo_ci95": [
+      -2399.9998262821205,
+      -2399.9998262821205
+    ],
+    "z": null,
+    "pairs_won": 0,
+    "pairs_lost": 16,
+    "sign_test_p": 3.0517578125e-05
+  }
+}

@@ -1,0 +1,2 @@
+{"model": "models/step_0036000.pt", "opponent": "taflzero", "ours": "15000 ms", "theirs": "15000 ms", "search": {"algorithm": "puct", "gumbel_noise": false, "c_puct": 1.5}, "leaves": 16, "reuse_tree": true, "moves_left_alpha": 0.0, "pairs": 8, "opening_plies": 2, "seed": 1, "min_opponent_speed": 1200.0, "above_normal": true}
+resuming with 16 recorded games, 11 of them too slow to count

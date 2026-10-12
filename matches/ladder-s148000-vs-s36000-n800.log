@@ -1,0 +1,74 @@
+{"model": "step_0148000.pt", "opponent": "models/step_0036000.pt", "ours": "800 nodes", "theirs": "800 nodes", "search": {"algorithm": "puct", "gumbel_noise": false, "c_puct": 1.5}, "leaves": 8, "reuse_tree": true, "moves_left_alpha": 0.0, "pairs": 16, "opening_plies": 2, "seed": 1, "min_opponent_speed": 0.0, "above_normal": false, "gpu_priority": false}
+[     19s] game 1/32: ours (att) vs opponent (def) -> opponent by KingEscaped in 38 plies | ours +0 -1 =0
+[     32s] game 2/32: opponent (att) vs ours (def) -> ours by ExitFort in 52 plies | ours +1 -1 =0
+[     34s] game 3/32: opponent (att) vs ours (def) -> ours by ExitFort in 54 plies | ours +2 -1 =0
+[     52s] game 4/32: opponent (att) vs ours (def) -> ours by KingEscaped in 74 plies | ours +3 -1 =0
+[     78s] game 5/32: opponent (att) vs ours (def) -> ours by KingEscaped in 44 plies | ours +4 -1 =0
+[     91s] game 6/32: opponent (att) vs ours (def) -> ours by KingEscaped in 84 plies | ours +5 -1 =0
+[     93s] game 7/32: ours (att) vs opponent (def) -> ours by Encircled in 127 plies | ours +6 -1 =0
+[     95s] game 8/32: ours (att) vs opponent (def) -> ours by NoMoves in 129 plies | ours +7 -1 =0
+[     98s] game 9/32: ours (att) vs opponent (def) -> ours by NoMoves in 137 plies | ours +8 -1 =0
+[    112s] game 10/32: ours (att) vs opponent (def) -> ours by Repetition in 100 plies | ours +9 -1 =0
+[    139s] game 11/32: opponent (att) vs ours (def) -> ours by ExitFort in 44 plies | ours +10 -1 =0
+[    142s] game 12/32: opponent (att) vs ours (def) -> ours by KingEscaped in 76 plies | ours +11 -1 =0
+[    146s] game 13/32: ours (att) vs opponent (def) -> ours by Encircled in 97 plies | ours +12 -1 =0
+[    146s] game 14/32: opponent (att) vs ours (def) -> opponent by Repetition in 189 plies | ours +12 -2 =0
+[    175s] game 15/32: ours (att) vs opponent (def) -> ours by Repetition in 109 plies | ours +13 -2 =0
+[    187s] game 16/32: ours (att) vs opponent (def) -> ours by Repetition in 219 plies | ours +14 -2 =0
+[    232s] game 17/32: opponent (att) vs ours (def) -> opponent by Repetition in 171 plies | ours +14 -3 =0
+[    239s] game 18/32: ours (att) vs opponent (def) -> ours by KingCaptured in 181 plies | ours +15 -3 =0
+[    246s] game 19/32: ours (att) vs opponent (def) -> ours by NoMoves in 133 plies | ours +16 -3 =0
+[    255s] game 20/32: opponent (att) vs ours (def) -> ours by KingEscaped in 40 plies | ours +17 -3 =0
+[    262s] game 21/32: ours (att) vs opponent (def) -> ours by Repetition in 119 plies | ours +18 -3 =0
+[    274s] game 22/32: opponent (att) vs ours (def) -> opponent by Repetition in 173 plies | ours +18 -4 =0
+[    275s] game 23/32: opponent (att) vs ours (def) -> ours by KingEscaped in 138 plies | ours +19 -4 =0
+[    279s] game 24/32: opponent (att) vs ours (def) -> ours by KingEscaped in 48 plies | ours +20 -4 =0
+[    309s] game 25/32: opponent (att) vs ours (def) -> ours by KingEscaped in 42 plies | ours +21 -4 =0
+[    312s] game 26/32: ours (att) vs opponent (def) -> ours by Repetition in 223 plies | ours +22 -4 =0
+[    323s] game 27/32: ours (att) vs opponent (def) -> ours by NoMoves in 145 plies | ours +23 -4 =0
+[    325s] game 28/32: ours (att) vs opponent (def) -> ours by Repetition in 91 plies | ours +24 -4 =0
+[    327s] game 29/32: opponent (att) vs ours (def) -> ours by KingEscaped in 82 plies | ours +25 -4 =0
+[    372s] game 30/32: ours (att) vs opponent (def) -> ours by Repetition in 157 plies | ours +26 -4 =0
+[    391s] game 31/32: ours (att) vs opponent (def) -> ours by Encircled in 255 plies | ours +27 -4 =0
+[    408s] game 32/32: opponent (att) vs ours (def) -> ours by KingEscaped in 432 plies | ours +28 -4 =0
+{
+  "model": "step_0148000.pt",
+  "opponent": "models/step_0036000.pt",
+  "ours": "800 nodes",
+  "theirs": "800 nodes",
+  "search": {
+    "algorithm": "puct",
+    "gumbel_noise": false,
+    "c_puct": 1.5
+  },
+  "leaves": 8,
+  "reuse_tree": true,
+  "moves_left_alpha": 0.0,
+  "pairs": 16,
+  "opening_plies": 2,
+  "seed": 1,
+  "min_opponent_speed": 0.0,
+  "above_normal": false,
+  "gpu_priority": false,
+  "games": 32,
+  "wins": 28,
+  "losses": 4,
+  "unknown": 0,
+  "as_attackers": 0.9375,
+  "as_defenders": 0.8125,
+  "score": 0.875,
+  "score_ci95": [
+    0.7654326691025103,
+    0.9845673308974897
+  ],
+  "elo": 338.0392160057028,
+  "elo_ci95": [
+    205.45578724272602,
+    721.9217507415783
+  ],
+  "z": 6.708203932499369,
+  "pairs_won": 12,
+  "pairs_lost": 0,
+  "sign_test_p": 0.00048828125,
+  "not_counted": 0
+}

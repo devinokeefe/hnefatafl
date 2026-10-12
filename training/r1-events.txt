@@ -1,0 +1,115 @@
+2026-10-03 19:06:09 start: step 0, 0 samples generated, 0 loaded
+2026-10-03 19:08:43 STOP file found
+2026-10-03 19:08:44 stopped at step 0
+2026-10-03 19:09:50 start: step 0, 4,134 samples generated, 4,134 loaded
+2026-10-03 19:20:50 STOP file found
+2026-10-03 19:20:51 stopped at step 504
+2026-10-03 19:21:01 start: step 504, 132,166 samples generated, 132,166 loaded
+2026-10-03 19:38:54 start: step 504, 142,553 samples generated, 142,553 loaded
+2026-10-03 20:14:19 STOP file found
+2026-10-03 20:14:20 stopped at step 1699
+2026-10-03 20:14:21 [supervisor] trainer exited cleanly
+2026-10-03 20:24:27 [supervisor] trainer exited with code 0x1 (1 crash(es) in the last hour)
+2026-10-03 20:24:43 [supervisor] trainer exited with code 0x1 (2 crash(es) in the last hour)
+2026-10-03 20:25:00 [supervisor] trainer exited with code 0x1 (3 crash(es) in the last hour)
+2026-10-03 20:25:16 [supervisor] trainer exited with code 0x1 (4 crash(es) in the last hour)
+2026-10-03 20:25:33 [supervisor] trainer exited with code 0x1 (5 crash(es) in the last hour)
+2026-10-03 20:25:50 [supervisor] trainer exited with code 0x1 (6 crash(es) in the last hour)
+2026-10-03 20:26:08 [supervisor] trainer exited with code 0x1 (7 crash(es) in the last hour)
+2026-10-03 20:26:08 [supervisor] too many crashes; giving up
+2026-10-03 20:30:26 cannot read latest.pt: PytorchStreamReader failed reading zip archive: failed finding central directory. This is an internal miniz error. If you are seeing this error, there is a high likelihood that your checkpoint file is corrupted. This can happen if the checkpoint was not saved properly, was transferred incorrectly, or the file was modified after saving.
+2026-10-03 20:30:26 resuming from step_0001699.pt with a fresh optimizer
+2026-10-03 20:30:28 start: step 1699, 437,483 samples generated, 320,125 loaded
+2026-10-03 21:03:55 STOP file found
+2026-10-03 21:03:56 stopped at step 2325
+2026-10-03 21:03:57 [supervisor] trainer exited cleanly
+2026-10-03 21:04:09 start: step 2325, 597,721 samples generated, 375,093 loaded
+2026-10-03 22:37:22 STOP file found
+2026-10-03 22:37:23 stopped at step 7352
+2026-10-03 22:37:25 [supervisor] trainer exited cleanly
+2026-10-03 22:37:48 start: step 7352, 1,884,371 samples generated, 724,030 loaded
+2026-10-04 03:37:53 STOP file found
+2026-10-04 03:37:54 stopped at step 22137
+2026-10-04 03:37:56 [supervisor] trainer exited cleanly
+2026-10-04 03:38:25 start: step 22137, 5,670,229 samples generated, 1,503,740 loaded
+2026-10-04 03:47:03 STOP file found
+2026-10-04 03:47:04 stopped at step 22450
+2026-10-04 03:47:05 [supervisor] trainer exited cleanly
+2026-10-04 03:47:29 start: step 22450, 5,748,395 samples generated, 1,516,731 loaded
+2026-10-04 03:54:06 STOP file found
+2026-10-04 03:54:07 stopped at step 22710
+2026-10-04 03:54:08 [supervisor] trainer exited cleanly
+2026-10-04 03:54:34 start: step 22710, 5,815,465 samples generated, 1,529,443 loaded
+2026-10-04 05:05:12 STOP file found
+2026-10-04 05:05:14 stopped at step 26927
+2026-10-04 05:05:14 [supervisor] trainer exited cleanly
+2026-10-04 05:38:00 start: step 26927, 6,894,391 samples generated, 1,722,354 loaded
+2026-10-04 05:46:05 [supervisor] trainer exited with code 0xc0000409 (1 crash(es) in the last hour)
+2026-10-04 05:47:16 start: step 27000, 6,940,095 samples generated, 1,729,548 loaded
+2026-10-04 05:47:30 stopped at step 27000 after an error: AcceleratorError("CUDA error: operation not permitted when stream is capturing\nSearch for `cudaErrorStreamCaptureUnsupported' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n")
+2026-10-04 05:47:32 [supervisor] trainer exited with code 0x1 (2 crash(es) in the last hour)
+2026-10-04 05:48:33 start: step 27000, 6,940,095 samples generated, 1,729,548 loaded
+2026-10-04 05:49:51 [supervisor] trainer exited with code 0xc0000409 (3 crash(es) in the last hour)
+2026-10-04 05:50:51 start: step 27000, 6,940,095 samples generated, 1,729,548 loaded
+2026-10-04 05:51:37 [supervisor] trainer exited with code 0xc0000409 (4 crash(es) in the last hour)
+2026-10-04 05:52:10 start: step 27000, 6,940,095 samples generated, 1,729,548 loaded
+2026-10-04 06:36:31 [supervisor] trainer exited with code 0xc0000409 (5 crash(es) in the last hour)
+2026-10-04 06:37:23 start: step 29500, 7,596,757 samples generated, 1,843,296 loaded
+2026-10-04 07:09:53 [supervisor] trainer exited with code 0xc0000409 (2 crash(es) in the last hour)
+2026-10-04 07:10:47 start: step 31500, 8,088,581 samples generated, 1,927,070 loaded
+2026-10-04 07:10:54 stopped at step 31500 after an error: AcceleratorError("CUDA error: operation not permitted when stream is capturing\nSearch for `cudaErrorStreamCaptureUnsupported' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n")
+2026-10-04 07:10:56 [supervisor] trainer exited with code 0x1 (3 crash(es) in the last hour)
+2026-10-04 07:11:41 start: step 31500, 8,088,581 samples generated, 1,927,070 loaded
+2026-10-04 07:26:05 [supervisor] trainer exited with code 0xc0000409 (4 crash(es) in the last hour)
+2026-10-04 07:27:40 start: step 32000, 8,220,196 samples generated, 1,948,619 loaded
+2026-10-04 07:31:40 STOP file found
+2026-10-04 07:31:41 stopped at step 32184
+2026-10-04 07:31:44 [supervisor] trainer exited cleanly
+2026-10-04 07:32:17 start: step 32184, 8,239,431 samples generated, 1,952,084 loaded
+2026-10-04 08:37:31 STOP file found
+2026-10-04 08:37:32 stopped at step 36007
+2026-10-04 08:37:35 [supervisor] trainer exited cleanly
+2026-10-04 09:02:33 start: step 36007, 9,221,697 samples generated, 2,113,160 loaded
+2026-10-04 09:05:43 STOP file found
+2026-10-04 09:05:44 stopped at step 36082
+2026-10-04 09:05:45 [supervisor] trainer exited cleanly
+2026-10-04 18:59:11 start: step 36082, 9,238,227 samples generated, 2,116,217 loaded
+2026-10-04 20:03:35 STOP file found
+2026-10-04 20:03:36 stopped at step 36136
+2026-10-04 20:03:41 [supervisor] trainer exited cleanly
+2026-10-04 21:27:24 start: step 36136, 9,250,652 samples generated, 2,118,563 loaded
+2026-10-04 23:37:55 [supervisor] trainer exited with code 0xc0000409 (1 crash(es) in the last hour)
+2026-10-04 23:38:58 start: step 36750, 9,410,641 samples generated, 2,144,297 loaded
+2026-10-04 23:40:27 STOP file found
+2026-10-04 23:40:28 stopped at step 36761
+2026-10-04 23:40:29 [supervisor] trainer exited cleanly
+2026-10-05 00:10:13 start: step 36761, 9,410,641 samples generated, 2,144,297 loaded
+2026-10-05 02:04:48 start: step 36761, 9,452,401 samples generated, 2,150,112 loaded
+2026-10-05 02:19:03 STOP file found
+2026-10-05 02:19:05 stopped at step 36946
+2026-10-05 02:19:10 [supervisor] trainer exited cleanly
+2026-10-05 03:36:29 start: step 36946, 9,458,760 samples generated, 2,151,279 loaded
+2026-10-05 08:59:57 STOP file found
+2026-10-05 08:59:59 stopped at step 41355
+2026-10-05 09:00:02 [supervisor] trainer exited cleanly
+2026-10-05 09:15:40 start: step 41355, 10,588,712 samples generated, 2,330,745 loaded
+2026-10-05 21:54:06 STOP file found
+2026-10-05 21:54:08 stopped at step 53912
+2026-10-05 21:54:08 [supervisor] trainer exited cleanly
+2026-10-06 07:46:50 start: step 53912, 13,803,681 samples generated, 2,819,199 loaded
+2026-10-11 13:42:26 STOP file found
+2026-10-11 13:42:27 stopped at step 471564
+2026-10-11 13:42:28 [supervisor] trainer exited cleanly
+2026-10-11 13:43:09 start: step 471564, 120,721,712 samples generated, 4,000,656 loaded
+2026-10-11 13:46:49 STOP file found
+2026-10-11 13:46:50 stopped at step 471622
+2026-10-11 13:46:51 [supervisor] trainer exited cleanly
+2026-10-12 00:21:15 start: step 471622, 120,735,467 samples generated, 4,000,832 loaded
+2026-10-12 00:21:15 STOP file found
+2026-10-12 00:21:19 stopped at step 471623
+2026-10-12 00:21:20 [supervisor] trainer exited cleanly
+2026-10-12 01:03:43 start: step 471623, 120,735,467 samples generated, 4,000,832 loaded
+2026-10-12 04:52:32 STOP file found
+2026-10-12 04:52:33 stopped at step 477137
+2026-10-12 04:52:33 [supervisor] trainer exited cleanly
+2026-10-12 06:06:18 start: step 477137, 122,148,897 samples generated, 4,001,175 loaded

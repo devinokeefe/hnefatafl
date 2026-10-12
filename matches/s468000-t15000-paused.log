@@ -1,0 +1,39 @@
+{"model": "models/step_0468000.pt", "opponent": "taflzero", "ours": "15000 ms", "theirs": "15000 ms", "search": {"algorithm": "puct", "gumbel_noise": false, "c_puct": 1.5}, "leaves": 16, "reuse_tree": true, "moves_left_alpha": 0.0, "pairs": 8, "opening_plies": 2, "seed": 1, "min_opponent_speed": 1350.0, "above_normal": true, "gpu_priority": false}
+machine quiet: taflzero reaches 2581 nodes/s
+[   1539s] game 1/16: ours (att) vs taflzero (def) -> ours by NoMoves in 109 plies | ours +1 -0 =0
+machine quiet: taflzero reaches 3037 nodes/s
+[   2126s] game 1/16: taflzero (att) vs ours (def) -> unknown by Interrupted in 39 plies | ours +1 -0 =0 | not counted: the machine was busy
+machine busy: another process is using the GPU
+machine busy: another process is using the GPU
+machine quiet: taflzero reaches 2919 nodes/s
+[   2826s] game 2/16: taflzero (att) vs ours (def) -> ours by ExitFort in 40 plies | ours +2 -0 =0
+machine quiet: taflzero reaches 3009 nodes/s
+[   4563s] game 3/16: ours (att) vs taflzero (def) -> ours by KingCaptured in 123 plies | ours +3 -0 =0
+machine quiet: taflzero reaches 2959 nodes/s
+[  13585s] game 4/16: taflzero (att) vs ours (def) -> unknown by PlyCap in 600 plies | ours +3 -0 =1
+machine quiet: taflzero reaches 3207 nodes/s
+[  19752s] game 5/16: ours (att) vs taflzero (def) -> ours by Encircled in 413 plies | ours +4 -0 =1
+machine quiet: taflzero reaches 1865 nodes/s
+[  20364s] game 6/16: taflzero (att) vs ours (def) -> ours by ExitFort in 42 plies | ours +5 -0 =1
+machine quiet: taflzero reaches 1766 nodes/s
+[  21503s] game 7/16: ours (att) vs taflzero (def) -> ours by KingCaptured in 83 plies | ours +6 -0 =1
+machine busy: another process is using the GPU
+machine busy: another process is using the GPU
+machine busy: another process is using the GPU
+machine busy: another process is using the GPU
+machine busy: another process is using the GPU
+machine busy: another process is using the GPU
+machine busy: another process is using the GPU
+machine busy: another process is using the GPU
+machine busy: another process is using the GPU
+machine quiet: taflzero reaches 1939 nodes/s
+[  31148s] game 8/16: taflzero (att) vs ours (def) -> unknown by PlyCap in 600 plies | ours +6 -0 =2
+machine quiet: taflzero reaches 2664 nodes/s
+[  32339s] game 9/16: ours (att) vs taflzero (def) -> ours by KingCaptured in 83 plies | ours +7 -0 =2
+machine quiet: taflzero reaches 1900 nodes/s
+[  32933s] game 10/16: taflzero (att) vs ours (def) -> ours by ExitFort in 42 plies | ours +8 -0 =2
+machine quiet: taflzero reaches 2103 nodes/s
+[  35094s] game 11/16: ours (att) vs taflzero (def) -> ours by KingCaptured in 153 plies | ours +9 -0 =2
+machine quiet: taflzero reaches 1844 nodes/s
+[  35597s] game 12/16: taflzero (att) vs ours (def) -> ours by ExitFort in 36 plies | ours +10 -0 =2
+machine quiet: taflzero reaches 1999 nodes/s

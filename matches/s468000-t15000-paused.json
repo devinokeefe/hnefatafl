@@ -1,0 +1,108 @@
+{
+  "match": "s468000-t15000-paused",
+  "records": {
+    "file": "s468000-t15000-paused.jsonl",
+    "games": 21,
+    "sha256": "c2a8c2a908b6ada991c901e2ec23ec04294dfb8a46fc2e54d1e51da879ffd770"
+  },
+  "runs": [
+    {
+      "log": "s468000-t15000-paused.log",
+      "created": "2026-10-11T13:46:59+01:00",
+      "last_written": "2026-10-11T23:40:56+01:00",
+      "header": {
+        "model": "models/step_0468000.pt",
+        "opponent": "taflzero",
+        "ours": "15000 ms",
+        "theirs": "15000 ms",
+        "search": {
+          "algorithm": "puct",
+          "gumbel_noise": false,
+          "c_puct": 1.5
+        },
+        "leaves": 16,
+        "reuse_tree": true,
+        "moves_left_alpha": 0.0,
+        "pairs": 8,
+        "opening_plies": 2,
+        "seed": 1,
+        "min_opponent_speed": 1350.0,
+        "above_normal": true,
+        "gpu_priority": false
+      }
+    },
+    {
+      "log": "s468000-t15000-paused.2.log",
+      "created": "2026-10-12T00:21:27+01:00",
+      "last_written": "2026-10-12T01:02:54+01:00",
+      "header": {
+        "model": "models/step_0468000.pt",
+        "opponent": "taflzero",
+        "ours": "15000 ms",
+        "theirs": "15000 ms",
+        "search": {
+          "algorithm": "puct",
+          "gumbel_noise": false,
+          "c_puct": 1.5
+        },
+        "leaves": 16,
+        "reuse_tree": true,
+        "moves_left_alpha": 0.0,
+        "pairs": 8,
+        "opening_plies": 2,
+        "seed": 1,
+        "min_opponent_speed": 1350.0,
+        "above_normal": true,
+        "gpu_priority": false
+      }
+    },
+    {
+      "log": "s468000-t15000-paused.3.log",
+      "created": "2026-10-12T04:52:42+01:00",
+      "last_written": "2026-10-12T06:05:45+01:00",
+      "header": {
+        "model": "models/step_0468000.pt",
+        "opponent": "taflzero",
+        "ours": "15000 ms",
+        "theirs": "15000 ms",
+        "search": {
+          "algorithm": "puct",
+          "gumbel_noise": false,
+          "c_puct": 1.5
+        },
+        "leaves": 16,
+        "reuse_tree": true,
+        "moves_left_alpha": 0.0,
+        "pairs": 8,
+        "opening_plies": 2,
+        "seed": 1,
+        "min_opponent_speed": 1350.0,
+        "above_normal": true,
+        "gpu_priority": false
+      }
+    }
+  ],
+  "summary": {
+    "games": 16,
+    "wins": 14,
+    "losses": 0,
+    "unknown": 2,
+    "as_attackers": 1.0,
+    "as_defenders": 0.875,
+    "score": 0.9375,
+    "score_ci95": [
+      0.8573049253382728,
+      1.0176950746617273
+    ],
+    "elo": 470.43650362227254,
+    "elo_ci95": [
+      311.4905343122887,
+      2399.999826281142
+    ],
+    "z": 10.692676621563628,
+    "pairs_won": 8,
+    "pairs_lost": 0,
+    "sign_test_p": 0.0078125,
+    "not_counted": 5
+  }
+}

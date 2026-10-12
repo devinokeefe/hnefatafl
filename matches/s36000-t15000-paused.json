@@ -1,0 +1,198 @@
+{
+  "match": "s36000-t15000-paused",
+  "records": {
+    "file": "s36000-t15000-paused.jsonl",
+    "games": 35,
+    "sha256": "83dbad0f0bdba8265c8176cd52aa80751a628ab3b6778783d533ee188a63867e"
+  },
+  "runs": [
+    {
+      "log": "s36000-t15000-paused.log",
+      "created": "2026-10-04T09:05:53+01:00",
+      "last_written": "2026-10-04T18:49:59+01:00",
+      "header": {
+        "model": "models/step_0036000.pt",
+        "opponent": "taflzero",
+        "ours": "15000 ms",
+        "theirs": "15000 ms",
+        "search": {
+          "algorithm": "puct",
+          "gumbel_noise": false,
+          "c_puct": 1.5
+        },
+        "leaves": 16,
+        "reuse_tree": true,
+        "moves_left_alpha": 0.0,
+        "pairs": 8,
+        "opening_plies": 2,
+        "seed": 1
+      }
+    },
+    {
+      "log": "s36000-t15000-paused.2.log",
+      "created": "2026-10-04T23:40:37+01:00",
+      "last_written": "2026-10-04T23:40:42+01:00",
+      "header": {
+        "model": "models/step_0036000.pt",
+        "opponent": "taflzero",
+        "ours": "15000 ms",
+        "theirs": "15000 ms",
+        "search": {
+          "algorithm": "puct",
+          "gumbel_noise": false,
+          "c_puct": 1.5
+        },
+        "leaves": 16,
+        "reuse_tree": true,
+        "moves_left_alpha": 0.0,
+        "pairs": 8,
+        "opening_plies": 2,
+        "seed": 1,
+        "min_opponent_speed": 1200.0,
+        "above_normal": true
+      }
+    },
+    {
+      "log": "s36000-t15000-paused.3.log",
+      "created": "2026-10-05T01:02:26+01:00",
+      "last_written": "2026-10-05T02:00:34+01:00",
+      "header": {
+        "model": "models/step_0036000.pt",
+        "opponent": "taflzero",
+        "ours": "15000 ms",
+        "theirs": "15000 ms",
+        "search": {
+          "algorithm": "puct",
+          "gumbel_noise": false,
+          "c_puct": 1.5
+        },
+        "leaves": 16,
+        "reuse_tree": true,
+        "moves_left_alpha": 0.0,
+        "pairs": 8,
+        "opening_plies": 2,
+        "seed": 1,
+        "min_opponent_speed": 1200.0,
+        "above_normal": true
+      }
+    },
+    {
+      "log": "s36000-t15000-paused.4.log",
+      "created": "2026-10-05T02:19:14+01:00",
+      "last_written": "2026-10-05T03:36:01+01:00",
+      "header": {
+        "model": "models/step_0036000.pt",
+        "opponent": "taflzero",
+        "ours": "15000 ms",
+        "theirs": "15000 ms",
+        "search": {
+          "algorithm": "puct",
+          "gumbel_noise": false,
+          "c_puct": 1.5
+        },
+        "leaves": 16,
+        "reuse_tree": true,
+        "moves_left_alpha": 0.0,
+        "pairs": 8,
+        "opening_plies": 2,
+        "seed": 1,
+        "min_opponent_speed": 1350.0,
+        "above_normal": true
+      }
+    },
+    {
+      "log": "s36000-t15000-paused.5.log",
+      "created": "2026-10-05T09:00:08+01:00",
+      "last_written": "2026-10-05T09:14:32+01:00",
+      "header": {
+        "model": "models/step_0036000.pt",
+        "opponent": "taflzero",
+        "ours": "15000 ms",
+        "theirs": "15000 ms",
+        "search": {
+          "algorithm": "puct",
+          "gumbel_noise": false,
+          "c_puct": 1.5
+        },
+        "leaves": 16,
+        "reuse_tree": true,
+        "moves_left_alpha": 0.0,
+        "pairs": 8,
+        "opening_plies": 2,
+        "seed": 1,
+        "min_opponent_speed": 1350.0,
+        "above_normal": true
+      }
+    },
+    {
+      "log": "s36000-t15000-paused.6.log",
+      "created": "2026-10-05T21:54:17+01:00",
+      "last_written": "2026-10-06T07:46:10+01:00",
+      "header": {
+        "model": "models/step_0036000.pt",
+        "opponent": "taflzero",
+        "ours": "15000 ms",
+        "theirs": "15000 ms",
+        "search": {
+          "algorithm": "puct",
+          "gumbel_noise": false,
+          "c_puct": 1.5
+        },
+        "leaves": 16,
+        "reuse_tree": true,
+        "moves_left_alpha": 0.0,
+        "pairs": 8,
+        "opening_plies": 2,
+        "seed": 1,
+        "min_opponent_speed": 1350.0,
+        "above_normal": true,
+        "gpu_priority": false
+      }
+    }
+  ],
+  "summary": {
+    "games": 16,
+    "wins": 12,
+    "losses": 1,
+    "unknown": 3,
+    "as_attackers": 0.875,
+    "as_defenders": 0.8125,
+    "score": 0.84375,
+    "score_ci95": [
+      0.714854451201758,
+      0.972645548798242
+    ],
+    "elo": 292.95750392918745,
+    "elo_ci95": [
+      159.66041169480388,
+      620.3706389832507
+    ],
+    "z": 5.227100596426406,
+    "pairs_won": 7,
+    "pairs_lost": 0,
+    "sign_test_p": 0.015625,
+    "not_counted": 19
+  },
+  "first_run_summary": {
+    "games": 16,
+    "wins": 14,
+    "losses": 0,
+    "unknown": 2,
+    "as_attackers": 1.0,
+    "as_defenders": 0.875,
+    "score": 0.9375,
+    "score_ci95": [
+      0.8573049253382728,
+      1.0176950746617273
+    ],
+    "elo": 470.43650362227254,
+    "elo_ci95": [
+      311.4905343122887,
+      2399.999826281142
+    ],
+    "z": 10.692676621563628,
+    "pairs_won": 8,
+    "pairs_lost": 0,
+    "sign_test_p": 0.0078125
+  }
+}

@@ -1,0 +1,70 @@
+{"model": "step_0016000.pt", "opponent": "taflzero", "ours": "400 nodes", "theirs": "400 nodes", "search": {"algorithm": "puct", "gumbel_noise": false, "c_puct": 1.5}, "leaves": 1, "reuse_tree": true, "moves_left_alpha": 0.0, "pairs": 16, "opening_plies": 2, "seed": 1}
+[    109s] game 1/32: ours (att) vs taflzero (def) -> taflzero by KingEscaped in 62 plies | ours +0 -1 =0
+[    112s] game 2/32: ours (att) vs taflzero (def) -> taflzero by ExitFort in 54 plies | ours +0 -2 =0
+[    188s] game 3/32: ours (att) vs taflzero (def) -> taflzero by KingEscaped in 88 plies | ours +0 -3 =0
+[    195s] game 4/32: ours (att) vs taflzero (def) -> taflzero by ExitFort in 82 plies | ours +0 -4 =0
+[    223s] game 5/32: ours (att) vs taflzero (def) -> taflzero by ExitFort in 44 plies | ours +0 -5 =0
+[    278s] game 6/32: taflzero (att) vs ours (def) -> taflzero by Repetition in 114 plies | ours +0 -6 =0
+[    293s] game 7/32: ours (att) vs taflzero (def) -> taflzero by KingEscaped in 56 plies | ours +0 -7 =0
+[    356s] game 8/32: ours (att) vs taflzero (def) -> taflzero by ExitFort in 56 plies | ours +0 -8 =0
+[    402s] game 9/32: ours (att) vs taflzero (def) -> taflzero by ExitFort in 44 plies | ours +0 -9 =0
+[    707s] game 10/32: taflzero (att) vs ours (def) -> taflzero by Repetition in 165 plies | ours +0 -10 =0
+[    886s] game 11/32: ours (att) vs taflzero (def) -> ours by KingCaptured in 195 plies | ours +1 -10 =0
+[   1049s] game 12/32: ours (att) vs taflzero (def) -> taflzero by ExitFort in 66 plies | ours +1 -11 =0
+[   1063s] game 13/32: taflzero (att) vs ours (def) -> taflzero by Repetition in 426 plies | ours +1 -12 =0
+[   1188s] game 14/32: ours (att) vs taflzero (def) -> taflzero by ExitFort in 44 plies | ours +1 -13 =0
+[   1654s] game 15/32: taflzero (att) vs ours (def) -> unknown by PlyCap in 600 plies | ours +1 -13 =1
+[   1654s] game 16/32: taflzero (att) vs ours (def) -> unknown by PlyCap in 600 plies | ours +1 -13 =2
+[   1773s] game 17/32: ours (att) vs taflzero (def) -> taflzero by KingEscaped in 50 plies | ours +1 -14 =2
+[   1784s] game 18/32: taflzero (att) vs ours (def) -> unknown by PlyCap in 600 plies | ours +1 -14 =3
+[   1866s] game 19/32: taflzero (att) vs ours (def) -> unknown by PlyCap in 600 plies | ours +1 -14 =4
+[   1885s] game 20/32: ours (att) vs taflzero (def) -> taflzero by KingEscaped in 58 plies | ours +1 -15 =4
+[   1903s] game 21/32: taflzero (att) vs ours (def) -> ours by KingEscaped in 50 plies | ours +2 -15 =4
+[   2040s] game 22/32: taflzero (att) vs ours (def) -> unknown by PlyCap in 600 plies | ours +2 -15 =5
+[   2071s] game 23/32: taflzero (att) vs ours (def) -> ours by KingEscaped in 78 plies | ours +3 -15 =5
+[   2104s] game 24/32: ours (att) vs taflzero (def) -> taflzero by ExitFort in 90 plies | ours +3 -16 =5
+[   2117s] game 25/32: ours (att) vs taflzero (def) -> taflzero by ExitFort in 80 plies | ours +3 -17 =5
+[   2303s] game 26/32: ours (att) vs taflzero (def) -> taflzero by ExitFort in 88 plies | ours +3 -18 =5
+[   2368s] game 27/32: taflzero (att) vs ours (def) -> unknown by PlyCap in 600 plies | ours +3 -18 =6
+[   2630s] game 28/32: taflzero (att) vs ours (def) -> unknown by PlyCap in 600 plies | ours +3 -18 =7
+[   2727s] game 29/32: taflzero (att) vs ours (def) -> unknown by PlyCap in 600 plies | ours +3 -18 =8
+[   2980s] game 30/32: taflzero (att) vs ours (def) -> unknown by PlyCap in 600 plies | ours +3 -18 =9
+[   3161s] game 31/32: taflzero (att) vs ours (def) -> unknown by PlyCap in 600 plies | ours +3 -18 =10
+[   3179s] game 32/32: taflzero (att) vs ours (def) -> unknown by PlyCap in 600 plies | ours +3 -18 =11
+{
+  "model": "step_0016000.pt",
+  "opponent": "taflzero",
+  "ours": "400 nodes",
+  "theirs": "400 nodes",
+  "search": {
+    "algorithm": "puct",
+    "gumbel_noise": false,
+    "c_puct": 1.5
+  },
+  "leaves": 1,
+  "reuse_tree": true,
+  "moves_left_alpha": 0.0,
+  "pairs": 16,
+  "opening_plies": 2,
+  "seed": 1,
+  "games": 32,
+  "wins": 3,
+  "losses": 18,
+  "unknown": 11,
+  "as_attackers": 0.0625,
+  "as_defenders": 0.46875,
+  "score": 0.265625,
+  "score_ci95": [
+    0.17106695455523982,
+    0.3601830454447602
+  ],
+  "elo": -176.6595746229774,
+  "elo_ci95": [
+    -274.1413317151708,
+    -99.81299138765229
+  ],
+  "z": -4.858127067234718,
+  "pairs_won": 1,
+  "pairs_lost": 13,
+  "sign_test_p": 0.0018310546875
+}

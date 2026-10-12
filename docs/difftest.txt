@@ -1,0 +1,18 @@
+The last full run of `tafl difftest`, the comparison of this engine's rules with TaflZero's
+(crates/tafl-cli/src/difftest.rs; README.md, "Rules").
+
+When:     2026-10-12, from 01:35 to 02:29 UK summer time (54 minutes), at low priority.
+Rules:    crates/tafl-core as in this release.
+TaflZero: a research probe built on 2026-09-16 from the TaflZero build the matches used (README.md,
+          "The opponent"), which links that build's rules library. Neither is in this repository.
+Command:  tafl difftest --probe PROBE --games 20000 --seed 1 --workers 4
+          (tafl built with `cargo build --release` from this release's sources at 01:33, after their
+          last change to the rules, into a target directory of its own; PROBE is the probe's path;
+          --max-plies was left at its default, 400.)
+
+Its output, as it printed it:
+
+compared 4091433 positions in 20000 games
+game endings: {"Encircled": 160, "ExitFort": 1521, "KingCaptured": 581, "KingEscaped": 9271, "NoMoves": 679, "Repetition": 2863, "ply cap": 4925}
+moves with shieldwall captures: 304
+0 mismatching games

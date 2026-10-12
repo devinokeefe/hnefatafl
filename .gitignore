@@ -1,0 +1,15 @@
+/target
+__pycache__/
+*.pyc
+.pytest_cache/
+/runs/
+/target-*/
+/build/
+*.egg-info/
+/.venv/
+/dist/
+/scratch/
+/taflzero.local.json
+# Checkpoints are not distributed. models/manifest.json identifies the two that the results use, and
+# tools/check_results.py checks a copy of either put here against it.
+/models/*.pt

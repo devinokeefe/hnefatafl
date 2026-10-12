@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "python/tafl/arena.py", line 487, in <module>
+    main()
+  File "python/tafl/arena.py", line 476, in main
+    games = play_match(a, b, openings, args.concurrency, args.max_plies, args.out)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "python/tafl/arena.py", line 375, in play_match
+    for gid, result in player.step():
+                       ^^^^^^^^^^^^^
+  File "python/tafl/arena.py", line 182, in step
+    out.append((game, future.result()))
+                      ^^^^^^^^^^^^^^^
+  File "<python>/Lib/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "<python>/Lib/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "<python>/Lib/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "python/tafl/arena.py", line 117, in go
+    line, seen = self._wait_for("bestmove", timeout)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "python/tafl/arena.py", line 107, in _wait_for
+    raise RuntimeError(f"engine exited (code {self.proc.poll()}); last output: {seen[-5:]}")
+RuntimeError: engine exited (code None); last output: ['position set to startpos (122 moves)', 'info score cp 5272 winrate 99.6% nodes 24 time 100 speed 240 pv f8g8 e8e2', 'info score cp 5336 winrate 99.6% nodes 56 time 214 speed 261 pv f8g8 e8e9']

@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.bin binary
+*.pt binary
+*.npz binary
+# The match records are copied byte for byte (tools/copy_records.py), with the arena's line endings.
+matches/*.jsonl -text
+matches/paused_controls.txt -text

@@ -1,0 +1,16 @@
+[package]
+name = "tafl-ffi"
+description = "C ABI over the engine for the Python training and match tools"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+tafl-core = { path = "../tafl-core" }
+tafl-engine = { path = "../tafl-engine" }
+rayon = "1.10"
+serde_json = "1"

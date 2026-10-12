@@ -1,0 +1,67 @@
+{"model": "models/step_0036000.pt", "opponent": "taflzero", "ours": "15000 ms", "theirs": "15000 ms", "search": {"algorithm": "puct", "gumbel_noise": false, "c_puct": 1.5}, "leaves": 16, "reuse_tree": true, "moves_left_alpha": 0.0, "pairs": 8, "opening_plies": 2, "seed": 1, "min_opponent_speed": 1350.0, "above_normal": true, "gpu_priority": false}
+resuming with 23 recorded games, 17 of them not counted
+machine quiet: taflzero reaches 2123 nodes/s
+[   1331s] game 7/16: ours (att) vs taflzero (def) -> ours by NoMoves in 95 plies | ours +6 -0 =1
+machine quiet: taflzero reaches 2271 nodes/s
+[   5237s] game 7/16: taflzero (att) vs ours (def) -> unknown by Interrupted in 260 plies | ours +6 -0 =1 | not counted: the machine was busy
+machine quiet: taflzero reaches 1398 nodes/s
+[   5662s] game 7/16: taflzero (att) vs ours (def) -> unknown by Interrupted in 29 plies | ours +6 -0 =1 | not counted: the machine was busy
+machine quiet: taflzero reaches 1448 nodes/s
+[  14676s] game 8/16: taflzero (att) vs ours (def) -> unknown by PlyCap in 600 plies | ours +6 -0 =2
+machine quiet: taflzero reaches 1516 nodes/s
+[  16425s] game 9/16: ours (att) vs taflzero (def) -> ours by NoMoves in 127 plies | ours +7 -0 =2
+machine quiet: taflzero reaches 1447 nodes/s
+[  25445s] game 10/16: taflzero (att) vs ours (def) -> unknown by PlyCap in 600 plies | ours +7 -0 =3
+machine quiet: taflzero reaches 1725 nodes/s
+[  27450s] game 11/16: ours (att) vs taflzero (def) -> taflzero by KingEscaped in 140 plies | ours +7 -1 =3
+machine quiet: taflzero reaches 1799 nodes/s
+[  28292s] game 12/16: taflzero (att) vs ours (def) -> ours by KingEscaped in 58 plies | ours +8 -1 =3
+machine quiet: taflzero reaches 2205 nodes/s
+[  31866s] game 13/16: ours (att) vs taflzero (def) -> ours by Repetition in 259 plies | ours +9 -1 =3
+machine quiet: taflzero reaches 1780 nodes/s
+[  32776s] game 14/16: taflzero (att) vs ours (def) -> ours by KingEscaped in 64 plies | ours +10 -1 =3
+machine quiet: taflzero reaches 1986 nodes/s
+[  34841s] game 15/16: ours (att) vs taflzero (def) -> ours by Repetition in 151 plies | ours +11 -1 =3
+machine quiet: taflzero reaches 1795 nodes/s
+[  35499s] game 16/16: taflzero (att) vs ours (def) -> ours by ExitFort in 46 plies | ours +12 -1 =3
+{
+  "model": "models/step_0036000.pt",
+  "opponent": "taflzero",
+  "ours": "15000 ms",
+  "theirs": "15000 ms",
+  "search": {
+    "algorithm": "puct",
+    "gumbel_noise": false,
+    "c_puct": 1.5
+  },
+  "leaves": 16,
+  "reuse_tree": true,
+  "moves_left_alpha": 0.0,
+  "pairs": 8,
+  "opening_plies": 2,
+  "seed": 1,
+  "min_opponent_speed": 1350.0,
+  "above_normal": true,
+  "gpu_priority": false,
+  "games": 16,
+  "wins": 12,
+  "losses": 1,
+  "unknown": 3,
+  "as_attackers": 0.875,
+  "as_defenders": 0.8125,
+  "score": 0.84375,
+  "score_ci95": [
+    0.714854451201758,
+    0.972645548798242
+  ],
+  "elo": 292.95750392918745,
+  "elo_ci95": [
+    159.66041169480388,
+    620.3706389832507
+  ],
+  "z": 5.227100596426406,
+  "pairs_won": 7,
+  "pairs_lost": 0,
+  "sign_test_p": 0.015625,
+  "not_counted": 19
+}
